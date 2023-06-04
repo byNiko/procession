@@ -1,0 +1,30 @@
+:root {
+	// font family
+	--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--font__pre: "Courier 10 Pitch", courier, monospace;
+	--font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	// body font size
+	--text-base-size: 1rem;
+
+	// line-height
+	--font__font__body-line-height: 1.4;
+	--heading-line-height: 1.2;
+	--font__line-height-pre: 1.6;
+
+	// type scale
+	--text-scale-ratio: 1.2;
+	--text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+	--text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+	--text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+	--text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+
+
+	@include bp(md) {
+		--text-base-size: 1.25em;
+		--text-scale-ratio: 1.25;
+	}
+
+}

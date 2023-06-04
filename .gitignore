@@ -1,0 +1,8 @@
+node_modules
+.eslintrc
+.stylelintrc.json
+LICENSE
+package-lock.json
+phpcs.xml.dist
+readme.txt
+readme.md
