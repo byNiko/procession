@@ -21,6 +21,25 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+@use 'node_modules/normalize.css/normalize.css';
+@use "assets/sass/base/overrides";
+@use 'node_modules/milligram/src/milligram';
+@use 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
 
-@import 'node_modules/milligram/src/milligram.sass';
-// @import 'node_modules/chota/dist/chota.css';
+@use "assets/sass/vendor/hamburger";
+@use "assets/sass/base/root";
+@use "assets/sass/base/custom-reset";
+@use "assets/sass/base/display";
+
+@use "assets/sass/base/colors";
+@use "assets/sass/base/typography";
+@use "assets/sass/base/spacing.scss";
+@use "assets/sass/base/grid";
+@use "assets/sass/base/base";
+@use "assets/sass/base/header";
+@use "assets/sass/base/nav";
+@use "assets/sass/base/footer";
+@use "assets/sass/base/buttons";
+@use "assets/sass/base/cards";
+@use "assets/sass/base/staff";
+@use "assets/sass/base/font-stack";

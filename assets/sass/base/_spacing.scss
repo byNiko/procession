@@ -1,0 +1,58 @@
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@for $i from 0 through 4 {
+
+	// MARGINS
+	.m-#{$i} {
+		margin:calc(#{$i} * var(--spacer));
+	}
+
+	.mb-#{$i} {
+		margin-bottom:calc(#{$i} * var(--spacer));
+	}
+
+	.mt-#{$i} {
+		margin-top: calc(#{$i} * var(--spacer));
+	}
+
+	.my-#{$i} {
+		@extend .mt-#{$i};
+		@extend .mb-#{$i};
+	}
+
+	// PADDING
+	.pb-#{$i} {
+		padding-bottom:calc(#{$i} * var(--spacer));
+	}
+
+	.pt-#{$i} {
+		padding-top: calc(#{$i} * var(--spacer));
+	}
+
+	.pl-#{$i} {
+		padding-left: calc(#{$i} * var(--spacer));
+	}
+
+	.pr-#{$i} {
+		padding-right: calc(#{$i} * var(--spacer));
+	}
+
+	.px-#{$i} {
+		@extend .pr-#{$i};
+		@extend .pl-#{$i};
+	}
+
+	.py-#{$i} {
+		@extend .pt-#{$i};
+		@extend .pb-#{$i};
+	}
+
+	.p-#{$i} {
+		@extend .py-#{$i};
+		@extend .px-#{$i};
+		// padding:calc(#{$i} * var(--spacer));
+	}
+}

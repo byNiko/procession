@@ -1,0 +1,50 @@
+@use '../abstracts/' as *;
+
+.row .column.column-100 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.container {
+	max-width: 112.0rem;
+	padding: 0 var(--gutter);
+}
+
+.container-fluid {
+	padding: 0 var(--gutter);
+}
+
+$widths: (
+	10,
+	15,
+	20,
+	25,
+	33,
+	40,
+	50,
+	60,
+	66,
+	75,
+	85,
+	100
+);
+
+@each $name in $widths {
+	.w-#{$name} {
+		@include bp(sm) {
+			width: #{$name}#{"%"};
+		}
+
+		width: #{"100%"};
+
+
+	}
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["base/custom-reset.scss","base/custom-reset.css"],"names":[],"mappings":"AAAA,IAGC,WAAA,CADA,cCCD","file":"base/custom-reset.css","sourcesContent":["img {\n\t// width: 100%;\n\tmax-width: 100%;\n\theight: auto;\n}","img {\n  max-width: 100%;\n  height: auto;\n}"]}

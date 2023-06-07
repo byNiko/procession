@@ -51,6 +51,7 @@ function procession_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'procession'),
+			'menu-2' => esc_html__('Secondary', 'procession'),
 		)
 	);
 
@@ -184,3 +185,37 @@ if (defined('JETPACK__VERSION')) {
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+require get_template_directory() . '/inc/acf.php';
+
+
+function mytheme_setup_theme_supported_features() {
+	add_theme_support('editor-color-palette', array(
+		array(
+			'name' => __('dark blue', 'procession'),
+			'slug' => 'dark-blue',
+			'color' => '#001f66',
+		),
+		array(
+			'name' => __('light blue', 'procession'),
+			'slug' => 'light-blue',
+			'color' => '#57a3f4',
+		),
+		array(
+			'name' => __('white', 'procession'),
+			'slug' => 'white',
+			'color' => '#fff',
+		),
+		array(
+			'name' => __('grey', 'procession'),
+			'slug' => 'grey',
+			'color' => '#f5f5f5',
+		),
+		array(
+			'name' => __('black', 'procession'),
+			'slug' => 'black',
+			'color' => '#000',
+		),
+	));
+}
+
+add_action('after_setup_theme', 'mytheme_setup_theme_supported_features');

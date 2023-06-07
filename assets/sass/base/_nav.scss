@@ -1,0 +1,171 @@
+@use '../abstracts/' as *;
+
+.menu-toggle {
+
+	&:focus {
+		background: none;
+	}
+
+	@include bp(sm) {
+		display: none;
+	}
+}
+
+.site-branding,
+.menu-toggle {
+	position: relative;
+	z-index: 10;
+}
+
+.main-navigation {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	width: 100%;
+
+	@include bp(sm) {
+		flex-direction: row;
+		width: auto;
+	}
+
+	.menu-menu-1-container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.sub-menu {
+		font-size: var(--font-xs);
+		opacity: 0;
+		visibility: hidden;
+		background: var(--color-blue-300);
+		position: absolute;
+		transition: opacity .2s .1s;
+		color: white;
+		z-index: 1;
+
+		a {
+			display: inline-block;
+			padding: var(--spacer);
+			color: white;
+		}
+	}
+
+	li:hover .sub-menu {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.nav-cta.button {
+		display: flex;
+
+		a {
+			padding: 0;
+			color: white;
+		}
+
+		margin-left:auto;
+		margin-right: auto;
+
+		@include bp(sm) {
+			margin-right: unset;
+		}
+
+	}
+}
+
+.menu,
+.menu ul,
+.menu li {
+	margin: 0;
+	position: relative;
+	list-style-type: none;
+}
+
+.menu {
+	display: flex;
+
+	.menu-item a {
+		padding: var(--spacer);
+		text-decoration: underline;
+		text-underline-offset: 0px;
+		text-decoration-color: transparent;
+		transition: all .2s;
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 8px;
+			text-decoration-color: var(--color-blue-300);
+		}
+	}
+}
+
+.menu-item.current-menu-item,
+.main-navigation .current_page_ancestor {
+	text-decoration: underline;
+	text-underline-offset: 8px;
+	text-decoration-color: orange;
+}
+
+.footer-menu {
+	& > li > a {
+		opacity: .67;
+	}
+
+	.sub-menu a {
+		opacity: 1;
+		// font-weight: 600;
+	}
+}
+
+
+.main-navigation {
+	position: absolute;
+	z-index: 1;
+	background: var(--color-grey-600);
+	left: 0;
+	top: 0;
+	height: 100vh;
+	transform: translatex(-100%);
+	transition: transform .2s;
+	padding: clamp(3rem, 5vw, 5rem);
+	padding-top: 10rem;
+
+	a {
+		font-size: 5rem;
+	}
+
+	.main-menu {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+
+		@include bp(sm) {
+			position: relative;
+			flex-direction: row;
+			background: transparent;
+			transform: translatex(0);
+			top: unset;
+			padding: unset;
+			height: auto;
+		}
+	}
+
+	&.is-active {
+		transform: translatex(0);
+	}
+
+	@include bp(sm) {
+		position: relative;
+		flex-direction: row;
+		background: transparent;
+		transform: translatex(0);
+		top: unset;
+		padding: unset;
+		height: auto;
+		box-shadow: none;
+
+		a {
+			font-size: unset;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+:root {
+	// CLORS
+	--color-blue-600: hsl(222, 100%, 20%);
+	--color-blue-300: hsl(211, 88%, 65%);
+	--color-grey-300: hsla(0, 0%, 96%);
+	--color-grey-600: hsla(0, 0%, 91%);
+	--color-white: hsla(0, 0%, 100%);
+	--color-black: hsla(0, 0%, 0%);
+	--color-primary: var(--color-blue-600);
+	--color-primary-300: hsla(203, 98%, 52%, var(--alpha));
+	--color-accent: var(--color-blue-300);
+
+
+	--bg-light: var(--color-white);
+	--bg-dark: var(--color-grey-300);
+
+	// TYPOGRAPHY
+	--font-sm: 1.66rem;
+	--font-xs: 1.33rem;
+
+	--font-default: Nueu Haas Grotesk, sans-serif;
+	--font-header: var(--font-default);
+
+	// SPACING
+	--spacer: 1rem;
+	--gutter: 2rem;
+	--section-padding: 5rem;
+}

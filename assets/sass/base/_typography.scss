@@ -1,0 +1,31 @@
+body,
+a {
+	font-family: var(--font-default);
+	color: var(--color-blue-300);
+}
+
+a:hover {
+	color: var(--color-blue-600);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	letter-spacing: unset;
+	margin-bottom: 2.0rem;
+	margin-top: 0;
+	font-family: var(--font-header);
+	color: var(--color-blue-600);
+}
+
+.font-sm {
+	font-size: var(--font-sm);
+}
+
+.font-xs {
+	font-size: var(--font-xs);
+}

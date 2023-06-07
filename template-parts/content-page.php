@@ -29,6 +29,7 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+	<?php get_template_part('/template-parts/partials/partial', strtolower($post->post_title)); ?>
 
 	<?php if (get_edit_post_link()) : ?>
 		<footer class="entry-footer">

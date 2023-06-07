@@ -1,20 +1,40 @@
-/* Typography
---------------------------------------------- */
-@import "typography/typography";
+body {
+	position: relative;
+	background-color: green;
+	background-color: hsla(0, 0%, 92%);
+	font-size: 2rem;
+	font-weight: 400;
+	;
 
-/* Elements
---------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+	&:before {
+			opacity: .58;
+			content: '';
+			position: absolute;
+			// z-index: -2;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-image: url(/uploads/P-Pattern_t3.svg);
+			background-size: cover;
+			background-position: 50% 0%;
+			background-attachment: scroll;
+		}
+	}
+	
+	.section-divider {
+		padding: var(--section-padding) 0;
+	}
 
-/* Links
---------------------------------------------- */
-@import "elements/links";
+.bg-light {
+	background: hsla(0, 0%, 100%, .6)
+}
 
-/* Forms
---------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
+.bg-dark {
+	--alpha: .5;
+	background-color: var(--bg-dark)
+}
+
+.filter-invert {
+	filter: invert(1)
+}

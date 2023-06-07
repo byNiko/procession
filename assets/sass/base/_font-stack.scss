@@ -1,0 +1,14 @@
+@mixin fontface($name, $path, $weight: 400, $style: "normal") {
+	@font-face {
+		font-family: #{$name};
+		src: url("#{$path}.woff2") format('woff2'),
+		url("#{$path}.woff") format('woff');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/nhaasgroteskdspro-55rg-webfont", 400);
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/nhaasgroteskdspro-56it-webfont", 400, "italic");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/nhaasgroteskdspro-65md-webfont", 600, "normal");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/nhaasgroteskdspro-66mdit-webfont", 600, "italic");

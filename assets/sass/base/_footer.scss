@@ -1,0 +1,36 @@
+.footer-logos .row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+
+.site-footer {
+	position: relative;
+	padding: var(--section-padding) 0;
+	background: black;
+	;
+
+	&:before {
+		opacity: .48;
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		background: var(--color-blue-300);
+	}
+}
+
+// menu
+.site-footer {
+	.menu {
+		font-size: var(--font-sm);
+	}
+
+	.sub-menu {
+		font-size: .8em;
+		font-weight: 800;
+		opacity: .8;
+	}
+}

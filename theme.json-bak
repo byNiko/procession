@@ -1,0 +1,59 @@
+{
+	"version": 2,
+	"customTemplates":[
+
+	],
+	"settings": {
+		"appearanceTools": true,
+		"color":{
+			"palette": [
+				{
+					"color" :"#001f66",
+					"name": "dark blue",
+					"slug": "primary"
+				},
+				{
+					"color" :"#57a3f4",
+					"name": "light blue",
+					"slug": "accent"
+				},
+				{
+					"color" :"#f5f5f5",
+					"name": "grey",
+					"slug": "grey"
+				},
+			]
+
+		},
+		"layout": {},
+		"spacing": {},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell, \"Helvetica Neue\",sans-serif",
+							"slug": "system-font",
+							"name": "System Font"
+						},
+						{
+							"fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
+							"slug": "helvetica-arial",
+							"name": "Helvetica or Arial"
+						},
+						{
+						"fontFamily":"Nueue Haas Grotesk",
+						"fontStyle": "normal",
+						"fontWeight": "400",
+						"src":[
+							"file:./dist/fonts/nhaasgroteskdspro-55rg-webfont.woff2"
+						]
+						}
+					]
+				}
+			]
+		}
+	},
+	"styles":{},
+	"templateParts":[]
+}
