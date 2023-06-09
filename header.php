@@ -54,4 +54,7 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+	<div class="header-wave">
+		<?php procession_get_wavy_line(); ?>
+	</div>
 	<div id="page" class="site-wrapper">

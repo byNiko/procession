@@ -2,7 +2,7 @@
 // Check rows existexists.
 if (have_rows('modules')) :
 ?>
-	<div class="container container-limit">
+	<div class=" container-limit">
 		<?php
 		$count = 0;
 		// Loop through rows.

@@ -1,13 +1,9 @@
 body {
 	position: relative;
-	background-color: green;
-	background-color: hsla(0, 0%, 92%);
-	font-size: 2rem;
-	font-weight: 400;
-	;
+	background-color: var(--color-grey-600);
 
 	&:before {
-			opacity: .58;
+			opacity: .48;
 			content: '';
 			position: absolute;
 			// z-index: -2;
@@ -16,14 +12,15 @@ body {
 			top: 0;
 			bottom: 0;
 			background-image: url(/uploads/P-Pattern_t3.svg);
-			background-size: cover;
+			background-size: 11vw;
 			background-position: 50% 0%;
 			background-attachment: scroll;
 		}
-	}
+}
 	
+.section-padding,
 	.section-divider {
-		padding: var(--section-padding) 0;
+		padding-top: var(--section-padding);
 	}
 
 .bg-light {
@@ -37,4 +34,40 @@ body {
 
 .filter-invert {
 	filter: invert(1)
+}
+.scallop {
+	--scallopMask:
+		linear-gradient(to bottom, #0000 14px, #000 0),
+		radial-gradient(14px, #000 98%, #0000) top/25.90px 28px;
+	height: 20px;
+	background: var(--color-primary);
+	-webkit-mask: var(--scallopMask);
+
+	mask: var(--scallopMask);
+}
+
+.wave {
+	--mask:
+		radial-gradient(13.16px at 50% calc(100% + 6.00px), #0000 calc(99% - 3px), #000 calc(101% - 3px) 99%, #0000 101%) calc(50% - 20px) calc(50% - 6.5px + .5px)/40px 13px repeat-x,
+		radial-gradient(13.16px at 50% -6px, #0000 calc(99% - 3px), #000 calc(101% - 3px) 99%, #0000 101%) 50% calc(50% + 6.5px)/40px 13px repeat-x;
+	-webkit-mask: var(--mask);
+	mask: var(--mask);
+	background: linear-gradient(90deg, green, orange, red, blue, purple);
+	height: 20px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	&:before,
+	&:after {
+		content: "";
+		height: 5px;
+	}
+
+
+
+}
+
+
+.bloomberg-container {
+	padding-bottom: var(--section-padding);
 }

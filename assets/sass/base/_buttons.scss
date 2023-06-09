@@ -2,16 +2,26 @@
 button,
 input[type=button],
 input[type=reset],
-input[type=submit] {
-	background: var(--color-accent);
-	border-color: var(--color-primary);
+input[type=submit],
+.has-dark-blue-background-color {
+	text-transform: unset;
+	font-size: 1em;
+	font-weight: 600;
+	background: var(--color-primary);
+	border-color: var(--color-accent);
+	border-radius: var(--border-radius);
 	transition: all .12s;
 	height: unset;
 	line-height: unset;
 	padding: 1rem 3rem;
+	&,
+		a {
+			color: white;
+			font-weight: 600;
+		}
 
 	&:hover {
-		background: var(--color-primary);
+		background: var(--color-accent);
 		opacity: .9;
 	}
 }

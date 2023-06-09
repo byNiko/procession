@@ -1,1 +1,0 @@
-{"version":3,"sources":["base/footer.scss","base/footer.css"],"names":[],"mappings":"AAAA,mBACC,YAAA,CACA,mCCCD","file":"base/footer.css","sourcesContent":[".footer-logos .row {\n\tdisplay: grid;\n\tgrid-template-columns: repeat(3, 1fr);\n}",".footer-logos .row {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n}"]}

@@ -33,18 +33,24 @@ $widths: (
 	.w-#{$name} {
 		@include bp(sm) {
 			width: #{$name}#{"%"};
-		}
-
-		width: #{"100%"};
-
-
+																																																																																																																																																																																																																																																																}
+																																																																																																																																																																																																																																																																width: #{"100%"};
 	}
 }
+.row .column.column-0.column-0 {
+	flex: 0 !important;
+}
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
 .justify-center {
 	justify-content: center;
 }
 
 .align-center {
 	align-items: center;
+}
+.align-end {
+	align-items: flex-end;
 }

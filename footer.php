@@ -14,13 +14,13 @@
 <?php
 get_template_part('/template-parts/bloomberg');
 ?>
+
 <footer id="colophon" class="site-footer ">
+	<div class="scallop"></div>
+
 	<div class="site-info container">
 		<div class="row">
-			<div class="column">
-				<?php get_template_part('/template-parts/footer-info'); ?>
-			</div>
-			<div class="column">
+			<div class="column column-33">
 				<?php
 				wp_nav_menu(
 					array(
@@ -30,6 +30,9 @@ get_template_part('/template-parts/bloomberg');
 					)
 				);
 				?>
+			</div>
+			<div class="column column-66">
+				<?php get_template_part('/template-parts/footer-info'); ?>
 			</div>
 		</div>
 	</div><!-- .site-info -->

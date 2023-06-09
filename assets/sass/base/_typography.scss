@@ -1,11 +1,28 @@
+:root {
+	--font-lg: 4rem;
+	--font-md: 2.7rem;
+	--font-sm: 1.66rem;
+	--font-xs: 1.33rem;
+	--line-height: 1.2;
+	--font-md: clamp(2.2rem, 2.7vw, 2.8rem);
+	--font-sm: clamp(1.4rem, 2vw, 1.7rem);
+	--fw-heavy: 600;
+	--fw-normal: 400;
+
+	--font-default: Nueu Haas Grotesk, sans-serif;
+	--font-header: var(--font-default);
+}
 body,
 a {
 	font-family: var(--font-default);
-	color: var(--color-blue-300);
+	color: var(--color-primary);
+		font-weight: 600;
+		font-size: var(--font-md);
+		line-height: 1.2;
 }
 
 a:hover {
-	color: var(--color-blue-600);
+	color: var(--color-accent);
 }
 
 h1,
@@ -14,14 +31,20 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 400;
+	font-size: var(--font-md);
+		font-weight: 600;
 	letter-spacing: unset;
 	margin-bottom: 2.0rem;
 	margin-top: 0;
 	font-family: var(--font-header);
-	color: var(--color-blue-600);
+	color: var(--color-primary);
+		line-height: 1.2;
+		margin-bottom: .2em;
 }
 
+.fw-normal {
+	font-weight: var(--fw-normal);
+}
 .font-sm {
 	font-size: var(--font-sm);
 }

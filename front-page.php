@@ -2,9 +2,10 @@
 
 
 <main class="">
+
 	<?php get_template_part('/template-parts/frontpage/map'); ?>
 
-	<div class="container">
+	<div class="container section-divider">
 		<?php
 		while (have_posts()) :
 			the_post();
@@ -21,7 +22,9 @@
 			<div class="row">
 				<?php get_template_part('/template-parts/acf-cards'); ?>
 			</div>
+
 		</div>
+		<?php procession_get_wavy_line(); ?>
 	</div>
 </main>
 <?php get_footer(); ?>

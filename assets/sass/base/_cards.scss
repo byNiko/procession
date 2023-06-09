@@ -2,7 +2,9 @@
 
 .card {}
 
-.card--title {}
+.card--title {
+	font-size: var(--font-sm);
+}
 
 .card--copy {
 	font-size: var(--font-sm);

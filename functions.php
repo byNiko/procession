@@ -219,3 +219,12 @@ function mytheme_setup_theme_supported_features() {
 }
 
 add_action('after_setup_theme', 'mytheme_setup_theme_supported_features');
+
+
+
+function procession_get_wavy_line() {
+	echo
+	'<div class="wave">
+	<img class="d-none" src="' . wp_get_upload_dir()['url'] . '/Wiggle-line-copy.png" alt="">
+</div>';
+}
