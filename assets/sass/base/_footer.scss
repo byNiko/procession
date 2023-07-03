@@ -1,52 +1,103 @@
-.footer-logos .row {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+@use '../abstracts/' as *;
+$footerBp: '930px';
+
+.footer-logos {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: var(--spacer);
+		height: 100%;
+
+	}
+}
+
+.footer-copy.column {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.border-vert {
+	display: none;
+	position: relative;
+	width: 3px;
+	flex: 0 3px;
+	background: var(--color-white);
+	align-self: center;
+	height: 100%;
+	min-height: 200px;
+	margin: 0 20px;
+
+	@include bp($footerBp) {
+		display: block;
+	}
 }
 
 
 .site-footer {
+	height: 100%;
 	position: relative;
 	padding: var(--section-padding) 0;
 	background: var(--color-blue-600);
-		margin-top: 20px;
-	
-		.scallop {
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			transform: translatey(-50%);
-	}
-}
-
-// menu
-.site-footer {
-color: white;
+	color: var(--color-white);
 	font-size: var(--font-sm);
 	font-weight: var(--fw-normal);
 
-	a {
-		color: var(--color-white);
-		font-weight: var(--fw-normal);
-	}
-.menu {
-	flex-direction: column;
-	
-		a {
-			color: var(--color-white);
-		font-size: var(--font-sm);
-		font-weight: var(--fw-normal);
+	.menu-item {
+		margin-top: var(--spacer);
+
+		.menu-item a {
+			font-weight: var(--fw-light);
 		}
+	}
+
+	.button.menu-item {
+		display: none;
+	}
+
+	a {
+		font-size: var(--font-sm);
+		color: var(--color-white);
+		font-weight: var(--fw-heavy);
+	}
 }
 
-.sub-menu {
-	li {
-			margin-left: .51em;
+.footer-menu {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	@include bp(xs) {
+		display: flex;
+	}
+}
+
+.site-info.container > .row {
+	flex-direction: column;
+	align-items: center;
+
+	.col1 {
+		margin-top: calc(5 *var(--spacer));
+		order: 1;
+	}
+
+	.col2 {
+		order: 0;
+	}
+
+	@include bp($footerBp) {
+		flex-direction: row;
+		align-items: flex-start;
+
+		.col1 {
+			margin-top: 0;
+			order: 0;
 		}
-	
-		a {
-			font-size: 0.8em;
-			font-weight: 400;
-		}
+
+		.col2 {}
 	}
 }

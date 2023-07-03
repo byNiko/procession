@@ -5,23 +5,55 @@ input[type=reset],
 input[type=submit],
 .has-dark-blue-background-color {
 	text-transform: unset;
-	font-size: 1em;
-	font-weight: 600;
-	background: var(--color-primary);
+	font-size: calc(.8 * var(--font-ms));
+		font-weight: 800;
+		background: var(--theme);
 	border-color: var(--color-accent);
-	border-radius: var(--border-radius);
+	border-radius: .8em; //var(--border-radius);
 	transition: all .12s;
 	height: unset;
 	line-height: unset;
-	padding: 1rem 3rem;
+	padding: 0.95em 1.9em;
 	&,
 		a {
 			color: white;
-			font-weight: 600;
+			font-weight: 800;
 		}
 
 	&:hover {
 		background: var(--color-accent);
 		opacity: .9;
+	}
+}
+.button-primary {
+	--theme: var(--color-primary);
+}
+
+.button-secondary {
+	--theme: var(--color-accent);
+}
+
+.button-tertiary {
+	--theme: var(--color-tertiary);
+}
+
+.button.button-sm {
+	font-size: var(--font-sm);
+	padding: .5em 1.5em;
+	border-radius: .52em;
+}
+
+.button.button-xs {
+	font-size: var(--font-xs);
+}
+
+.button.button-hollow {
+	color: var(--theme);
+	background: transparent;
+	border-color: currentColor;
+
+	&:hover {
+		background: var(--theme);
+		color: var(--color-white);
 	}
 }

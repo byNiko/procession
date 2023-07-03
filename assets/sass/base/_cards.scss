@@ -1,11 +1,16 @@
-.cards {}
+.cards.is-horizonal {}
 
 .card {}
 
 .card--title {
-	font-size: var(--font-sm);
+	font-size: var(--font-md);
 }
 
 .card--copy {
 	font-size: var(--font-sm);
+}
+.card {
+	&:hover * {
+		color: var(--color-accent);
+	}
 }

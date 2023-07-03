@@ -228,3 +228,12 @@ function procession_get_wavy_line() {
 	<img class="d-none" src="' . wp_get_upload_dir()['url'] . '/Wiggle-line-copy.png" alt="">
 </div>';
 }
+
+
+function procession_query_all_events($query) {
+	if (is_admin()) return;
+	if ($query->is_main_query()) {
+		$query->set('post_type', 'event');
+	}
+}
+// add_action('pre_get_posts', 'procession_query_all_events');

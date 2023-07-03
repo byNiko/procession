@@ -1,15 +1,20 @@
 @use "sass:map";
 $breakpoints: (
+	xs: 30rem,
 	sm: 40rem,
 	md: 80rem,
 	lg: 120rem
 );
 
-@mixin bp($key) {
-	$size : map.get($breakpoints, $key);
+@mixin bp($key, $maxMin: "min-width") {
+	$size: $key;
+
+	@if(map-has-key($breakpoints , $key )) {
+		$size : map.get($breakpoints, $key);
+	}
 
 	@if($size) {
-		@media screen and (min-width:$size) {
+		@media screen and ($maxMin: $size) {
 			@content;
 		}
 	}

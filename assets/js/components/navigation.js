@@ -6,7 +6,7 @@
  */
 
 (function () {
-	console.log('nav testing')
+
 	const siteNavigation = document.getElementById('site-navigation');
 
 	// Return early if the navigation doesn't exist.

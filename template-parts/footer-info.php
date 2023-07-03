@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="column footer-copy">
 		<p class="font-sm "><?php the_field('footer_copy', 'option', false); ?></p>
-		<div class="footer-logos">
+		<div class="footer-logos mt-3">
 			<?php get_template_part('/template-parts/logos'); ?>
 		</div>
 	</div>

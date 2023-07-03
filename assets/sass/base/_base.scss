@@ -14,60 +14,100 @@ body {
 			background-image: url(/uploads/P-Pattern_t3.svg);
 			background-size: 11vw;
 			background-position: 50% 0%;
-			background-attachment: scroll;
+			background-attachment: fixed;
 		}
 }
-	
-.section-padding,
-	.section-divider {
-		padding-top: var(--section-padding);
-	}
 
-.bg-light {
-	background: hsla(0, 0%, 100%, .6)
+main {
+	display: flex;
+	flex-direction: column;
+
+}
+.section-padding,
+.section-divider {
+	padding-top: var(--section-padding);
+}
+.section-divider:first-of-type {
+	padding-top: inherit;
 }
 
+.inner-page--wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: calc(5*var(--spacer));
+}
+.bg-light {
+	background: hsla(0, 0%, 100%, .6);
+}
+
+.semiopaque-dark {
+	background-color: #c5c5c56e;
+}
 .bg-dark {
-	--alpha: .5;
-	background-color: var(--bg-dark)
+	background-color: var(--color-grey-800);
 }
 
 .filter-invert {
 	filter: invert(1)
 }
+
 .scallop {
+--height: 20px;
+	margin-top: calc(-0.5 * var(--height));
 	--scallopMask:
 		linear-gradient(to bottom, #0000 14px, #000 0),
 		radial-gradient(14px, #000 98%, #0000) top/25.90px 28px;
-	height: 20px;
+	height: var(--height);
 	background: var(--color-primary);
 	-webkit-mask: var(--scallopMask);
-
 	mask: var(--scallopMask);
+	position: absolute;
+		bottom: 0; //calc(-1 * var(--height));
+		display: block;
+		width: 100%;
 }
 
 .wave {
+	display: block;
 	--mask:
 		radial-gradient(13.16px at 50% calc(100% + 6.00px), #0000 calc(99% - 3px), #000 calc(101% - 3px) 99%, #0000 101%) calc(50% - 20px) calc(50% - 6.5px + .5px)/40px 13px repeat-x,
 		radial-gradient(13.16px at 50% -6px, #0000 calc(99% - 3px), #000 calc(101% - 3px) 99%, #0000 101%) 50% calc(50% + 6.5px)/40px 13px repeat-x;
 	-webkit-mask: var(--mask);
 	mask: var(--mask);
-	background: linear-gradient(90deg, green, orange, red, blue, purple);
+	background-image: linear-gradient(90deg, green, orange, red, blue, purple, green, orange, red, blue, purple, black), ;
+		background-size: 300%;
 	height: 20px;
+	width: 100%;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
-
-	&:before,
-	&:after {
-		content: "";
-		height: 5px;
+	animation: animateBackgroundColor 65s linear infinite;
 	}
-
-
-
-}
-
 
 .bloomberg-container {
 	padding-bottom: var(--section-padding);
+}
+
+.entry-header {
+	margin-bottom: calc(var(--spacer) * 5);
+
+	.entry-title {
+		font-size: var(--font-xl);
+
+}
+}
+
+.wp-post-image {
+	width: 100%;
+	max-width: none;
+}
+
+.absolute-top-right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.relative {
+	position: relative;
 }

@@ -37,9 +37,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @use "assets/sass/base/grid";
 @use "assets/sass/base/base";
 @use "assets/sass/base/header";
+@use "assets/sass/base/forms";
 @use "assets/sass/base/nav";
 @use "assets/sass/base/footer";
 @use "assets/sass/base/buttons";
+@use "assets/sass/pages/events";
+@use "assets/sass/pages/artist";
+@use "assets/sass/components/popup";
+@use "assets/sass/components/map";
 @use "assets/sass/base/cards";
 @use "assets/sass/base/staff";
 @use "assets/sass/base/font-stack";
+@use "assets/sass/base/animations";

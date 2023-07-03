@@ -4,3 +4,22 @@
 .d-block {
 	display: block;
 }
+.d-inline-block {
+	display: inline-block;
+}
+
+.d-flex {
+	display: flex !important;
+}
+
+.direction-column {
+	flex-direction: column;
+}
+
+.direction-row {
+	flex-direction: row;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}

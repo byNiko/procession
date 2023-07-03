@@ -4,18 +4,26 @@
 	--color-blue-600: hsl(234, 46%, 25%); //#001f66;
 	--color-grey-300: hsla(0, 0%, 96%);
 	--color-grey-600: hsla(0, 0%, 91%);
+	--color-grey-800: rgb(197, 197, 197);
 
 	--color-white: hsla(0, 0%, 100%);
 	--color-black: hsla(0, 0%, 0%);
 
+	--color-orange: hsl(15, 100%, 56%);
+		--color-teal: hsl(175, 100%, 34%);
 	--color-primary: var(--color-blue-600);
 	--color-accent: var(--color-blue-300);
+--color-tertiary: var(--color-orange);
+	--color-quaternary: var(--color-teal);
 
 	--bg-light: var(--color-white);
-	--bg-dark: var(--color-grey-300);
+	--bg-dark: var(--color-grey-600);
 	// SPACING
 	--spacer: 1rem;
 	--gutter: 2rem;
-	--section-padding: 5rem;
-	--border-radius: 1.5rem;
+	--popup-padding: clamp(3rem, 6vw, 5rem);
+		--section-padding: calc(5* var(--spacer));
+		--vert-spacing: clamp(2.5rem, 2vw, 4rem);
+		--vert-spacing: 1.8rem;
+		--border-radius: .51em;
 }

@@ -10,8 +10,11 @@
 	margin-right: auto;
 }
 
-@for $i from 0 through 4 {
+.mt-small {
+	margin-top: calc(.5 * var(--spacer));
+}
 
+@for $i from 0 through 5 {
 	// MARGINS
 	.m-#{$i} {
 		margin:calc(#{$i} * var(--spacer));

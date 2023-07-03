@@ -18,6 +18,7 @@ get_header();
 <div class="container">
 	<div class="row">
 		<main id="primary" class="site-main column">
+
 			<?php
 			while (have_posts()) :
 				the_post();

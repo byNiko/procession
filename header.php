@@ -16,11 +16,17 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
+<?php $bg_img_url = get_field('body_background_image', 'options'); ?>
+<style>
+	body:before {
+		background-image: url(<?php echo $bg_img_url; ?>);
+	}
+</style>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
@@ -58,3 +64,4 @@
 		<?php procession_get_wavy_line(); ?>
 	</div>
 	<div id="page" class="site-wrapper">
+		<div class="inner-page--wrapper">

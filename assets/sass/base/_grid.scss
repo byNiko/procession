@@ -1,5 +1,14 @@
 @use '../abstracts/' as *;
 
+.container .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.row {
+	position: relative;
+}
+
 .row .column.column-100 {
 	flex: 0 0 100%;
 	max-width: 100%;
@@ -12,6 +21,20 @@
 
 .container-fluid {
 	padding: 0 var(--gutter);
+}
+
+.grid {
+	display: grid;
+}
+
+.grid-2 {
+	grid-template-columns: 1fr 1fr;
+	grid-gap: calc(2* var(--spacer));
+}
+
+.grid-3 {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: calc(2* var(--spacer));
 }
 
 $widths: (
@@ -33,17 +56,25 @@ $widths: (
 	.w-#{$name} {
 		@include bp(sm) {
 			width: #{$name}#{"%"};
-																																																																																																																																																																																																																																																																}
-																																																																																																																																																																																																																																																																width: #{"100%"};
+		}
+
+		width: #{"100%"};
 	}
 }
+
 .row .column.column-0.column-0 {
 	flex: 0 !important;
+}
+
+.column.column-15 {
+	flex: 0 0 15%;
+	max-width: 15%;
 }
 
 .flex-wrap {
 	flex-wrap: wrap;
 }
+
 .justify-center {
 	justify-content: center;
 }
@@ -51,6 +82,13 @@ $widths: (
 .align-center {
 	align-items: center;
 }
+
 .align-end {
 	align-items: flex-end;
+}
+
+@include bp(sm, 'max-width') {
+	.row .column[class*=" column-"] {
+		max-width: none;
+	}
 }

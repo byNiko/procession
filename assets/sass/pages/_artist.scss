@@ -1,0 +1,19 @@
+.artist--name {
+	font-weight: 800;
+}
+
+
+.artist--wrapper {
+	.artist--name {
+		margin-bottom: var(--vert-spacing);
+	}
+
+	.artist--bio {
+
+		font-size: var(--font-sm);
+
+		.page-about & {
+			font-size: var(--font-ms);
+		}
+	}
+}
