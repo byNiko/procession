@@ -46,44 +46,42 @@
 			$cost = (get_field('cost'));
 			$rsvp = (get_field('rsvp_link'));
 			if ($rsvp || $cost) : ?>
-			<div class="event--meta-container">
-				<div class="event--rsvp event--meta-button">
-					<?php if ($cost) : ?>
-					<div class="event--cost font-xs"><?php echo $cost; ?> </div>
-					<?php endif; ?>
-					<?php if ($rsvp) : ?>
-					<a class="button button-sm button-primary" target="<?php echo $rsfp['target']; ?>"
-					   href="<?php echo $rsvp['url']; ?>">
-						<?php echo $rsvp['title']; ?>
-					</a>
-					<?php endif; ?>
-				</div>
+				<div class="event--meta-container">
+					<div class="event--rsvp event--meta-button">
+						<?php if ($cost) : ?>
+							<div class="event--cost event--meta-title"><?php echo $cost; ?> </div>
+						<?php endif; ?>
+						<?php if ($rsvp) : ?>
+							<a class="button button-sm button-primary" target="<?php echo $rsvp['target']; ?>" href="<?php echo $rsvp['url']; ?>">
+								<?php echo $rsvp['title']; ?>
+							</a>
+						<?php endif; ?>
+					</div>
 				<?php endif; ?>
-			</div>
-			<?php if (have_rows('notes_group')) : ?>
-			<?php while (have_rows('notes_group')) : the_row(); ?>
-			<?php if (get_sub_field('note') !== '') : ?>
-			<div class="event--meta-container ">
-				<div class="event--notes">
-					<div class="event--meta-title">Note</div>
-					<div class="event--note">
-						<?php the_sub_field('note'); ?>
-					</div>
-					<?php $link = get_sub_field('link'); ?>
-					<?php if ($link) : ?>
-					<div class="text-right">
-						<a class="event--note-link font-parent" target="<?php echo $link['target']; ?>"
-						   href="<?php echo $link['url']; ?>">
-							<?php echo $link['title']; ?>
-						</a>
-					</div>
-					<?php endif; ?>
 				</div>
+				<?php if (have_rows('notes_group')) : ?>
+					<?php while (have_rows('notes_group')) : the_row(); ?>
+						<?php if (get_sub_field('note') !== '') : ?>
+							<div class="event--meta-container ">
+								<div class="event--notes">
+									<div class="event--meta-title">Note</div>
+									<div class="event--note">
+										<?php the_sub_field('note'); ?>
+									</div>
+									<?php $link = get_sub_field('link'); ?>
+									<?php if ($link) : ?>
+										<div class="text-right">
+											<a class="event--note-link font-parent" target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>">
+												<?php echo $link['title']; ?>
+											</a>
+										</div>
+									<?php endif; ?>
+								</div>
 
-			</div>
-			<?php endif; ?>
-			<?php endwhile; ?>
-			<?php endif; ?>
+							</div>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
 		</aside>
 		<div class="entry-content column mt-5">
 			<div class="event--main-copy">
@@ -96,24 +94,26 @@
 <?php
 $connected_events = get_field('connected_events');
 if ($connected_events) : ?>
-<div class="full-width  mt-5 py-5">
-	<div class="container">
-		<?php foreach ($connected_events as $post) :
+	<?php procession_get_wavy_line(); ?>
+	<div class="full-width">
+		<div class="container">
+			<?php foreach ($connected_events as $post) :
 				// Setup this post for WP functions (variable must be named $post).
 				setup_postdata($post);
 				get_template_part('template-parts/partials/card-horizontal', null, array('post' => $post));
+				wp_reset_postdata();
 			endforeach;
-			// Reset the global post object so that the rest of the page works correctly.
-			wp_reset_postdata(); ?>
+			?>
+
+		</div>
 	</div>
-</div>
 <?php endif; ?>
 
-<?php get_template_part('/template-parts/partials/partial', strtolower($post->post_title)); ?>
+<?php get_template_part('/template-parts/partials/partial', str_replace(":", "", strtolower($post->post_name))); ?>
 
 <?php if (get_edit_post_link()) : ?>
-<footer class="entry-footer">
-	<?php
+	<footer class="entry-footer">
+		<?php
 		edit_post_link(
 			sprintf(
 				wp_kses(
@@ -131,6 +131,6 @@ if ($connected_events) : ?>
 			'</span>'
 		);
 		?>
-</footer><!-- .entry-footer -->
+	</footer><!-- .entry-footer -->
 <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

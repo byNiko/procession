@@ -3,19 +3,19 @@ body {
 	background-color: var(--color-grey-600);
 
 	&:before {
-			opacity: .48;
-			content: '';
-			position: absolute;
-			// z-index: -2;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background-image: url(/uploads/P-Pattern_t3.svg);
-			background-size: 11vw;
-			background-position: 50% 0%;
-			background-attachment: fixed;
-		}
+		opacity: 1;
+		content: '';
+		position: absolute;
+		// z-index: -2;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		// background-image: url(/uploads/P-Pattern_t3.svg);
+		// background-size: 119vw;
+		background-position: 50% 0%;
+		background-attachment: fixed;
+	}
 }
 
 main {
@@ -23,20 +23,24 @@ main {
 	flex-direction: column;
 
 }
+
 .section-padding,
 .section-divider {
 	padding-top: var(--section-padding);
 }
+
 .section-divider:first-of-type {
 	padding-top: inherit;
 }
 
 .inner-page--wrapper {
+	margin-top: var(--spacer-xl);
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: calc(5*var(--spacer));
+	padding-bottom: var(--spacer-xl);
 }
+
 .bg-light {
 	background: hsla(0, 0%, 100%, .6);
 }
@@ -44,6 +48,7 @@ main {
 .semiopaque-dark {
 	background-color: #c5c5c56e;
 }
+
 .bg-dark {
 	background-color: var(--color-grey-800);
 }
@@ -53,7 +58,7 @@ main {
 }
 
 .scallop {
---height: 20px;
+	--height: 20px;
 	margin-top: calc(-0.5 * var(--height));
 	--scallopMask:
 		linear-gradient(to bottom, #0000 14px, #000 0),
@@ -63,9 +68,9 @@ main {
 	-webkit-mask: var(--scallopMask);
 	mask: var(--scallopMask);
 	position: absolute;
-		bottom: 0; //calc(-1 * var(--height));
-		display: block;
-		width: 100%;
+	bottom: 0; //calc(-1 * var(--height));
+	display: block;
+	width: 100%;
 }
 
 .wave {
@@ -76,30 +81,25 @@ main {
 	-webkit-mask: var(--mask);
 	mask: var(--mask);
 	background-image: linear-gradient(90deg, green, orange, red, blue, purple, green, orange, red, blue, purple, black), ;
-		background-size: 300%;
+	background-size: 300%;
 	height: 20px;
 	width: 100%;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-top: var(--spacer-xxl);
+	margin-bottom: var(--spacer-xxl);
 	animation: animateBackgroundColor 65s linear infinite;
-	}
+}
 
 .bloomberg-container {
 	padding-bottom: var(--section-padding);
 }
 
 .entry-header {
-	margin-bottom: calc(var(--spacer) * 5);
+	margin-bottom: var(--spacer-xl);
 
 	.entry-title {
 		font-size: var(--font-xl);
 
-}
-}
-
-.wp-post-image {
-	width: 100%;
-	max-width: none;
+	}
 }
 
 .absolute-top-right {
@@ -110,4 +110,25 @@ main {
 
 .relative {
 	position: relative;
+}
+
+.wp-post-image {
+	width: 100%;
+	max-width: none;
+	margin-top: var(--spacer--images);
+	margin-bottom: var(--spacer--images);
+
+	.card.event--card & {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.entry-header + .post-thumbnail > & {
+		margin-top: 0;
+	}
+}
+
+
+.page-about .collaborators-container {
+	margin-top: var(--spacer-xl);
 }

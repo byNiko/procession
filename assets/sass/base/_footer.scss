@@ -6,10 +6,15 @@ $footerBp: '930px';
 	margin-left: auto;
 	margin-right: auto;
 
+	.column {
+		display: flex;
+		align-items: center;
+	}
+
 	.row {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: var(--spacer);
+		grid-gap: var(--spacer-md);
 		height: 100%;
 
 	}
@@ -27,9 +32,7 @@ $footerBp: '930px';
 	width: 3px;
 	flex: 0 3px;
 	background: var(--color-white);
-	align-self: center;
-	height: 100%;
-	min-height: 200px;
+	align-self: stretch;
 	margin: 0 20px;
 
 	@include bp($footerBp) {
@@ -41,17 +44,28 @@ $footerBp: '930px';
 .site-footer {
 	height: 100%;
 	position: relative;
-	padding: var(--section-padding) 0;
+	padding: var(--spacer-lg) 0;
 	background: var(--color-blue-600);
 	color: var(--color-white);
 	font-size: var(--font-sm);
 	font-weight: var(--fw-normal);
 
+	.menu-menu-1-container {
+		max-width: 570px;
+		margin: auto;
+	}
+
 	.menu-item {
-		margin-top: var(--spacer);
+		margin-top: var(--spacer-sm);
+
+		a:hover {
+			color: var(--color-white);
+			text-decoration: underline;
+		}
 
 		.menu-item a {
 			font-weight: var(--fw-light);
+			font-size: var(--font-xs);
 		}
 	}
 
@@ -73,6 +87,7 @@ $footerBp: '930px';
 
 	@include bp(xs) {
 		display: flex;
+		justify-content: space-between
 	}
 }
 
@@ -81,7 +96,7 @@ $footerBp: '930px';
 	align-items: center;
 
 	.col1 {
-		margin-top: calc(5 *var(--spacer));
+		margin-top: var(--spacer-md);
 		order: 1;
 	}
 

@@ -10,27 +10,30 @@
 	<select name="event-tags" id="event-tag-select" class="font-sm">
 		<option selected value="">All Events</option>
 		<?php foreach ($tags as $tag) : ?>
-			<option value="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></option>
+		<option value="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></option>
 		<?php endforeach; ?>
 	</select>
 </div>
 
 <?php $futures = get_scheduled_events("future"); ?>
 <?php if ($futures) : ?>
-	<div class="current-events mt-5">
+<h2 class="">Upcoming Events</hs>
+	<div class="current-events">
+
 		<?php foreach ($futures as $post) : setup_postdata($post); ?>
-			<?php get_template_part('template-parts/content', get_post_type()); ?>
+		<?php get_template_part('template-parts/content', get_post_type()); ?>
 		<?php endforeach; ?>
 	</div>
-<?php endif; ?>
+	<?php endif; ?>
 
-<?php $past = get_scheduled_events("past"); ?>
-<?php if ($past) : ?>
+	<?php $past = get_scheduled_events("past"); ?>
+	<?php if ($past) : ?>
 
-	<div class="archived-events mt-5">
+	<div class="archived-events">
+		<?php procession_get_wavy_line(); ?>
 		<h2>Archived Events</h2>
 		<?php foreach ($past as $post) : setup_postdata($post); ?>
-			<?php get_template_part('template-parts/content', get_post_type()); ?>
+		<?php get_template_part('template-parts/content', get_post_type()); ?>
 		<?php endforeach; ?>
 	</div>
-<?php endif; ?>
+	<?php endif; ?>

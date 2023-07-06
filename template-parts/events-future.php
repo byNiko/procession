@@ -7,7 +7,7 @@ if ($futureEvents) : ?>
 		<div class="container">
 			<div class="row relative">
 				<div class="column">
-					<h2>Upcoming Events</h1>
+					<h2>Upcoming Events</h2>
 				</div>
 				<div class="column column-20 absolute-top-right text-right">
 					<a class="font-xs lh-default d-inline-block td-u" href="/events">View All Events</a>

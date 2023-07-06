@@ -40,6 +40,7 @@
 	}
 
 	function handleClick( e ) {
+
 		e.target.closest( '.openJoinPopup' ) ? openJoinPopup() : null;
 		e.target.closest( '#background-overlay' ) ? closePopup() : null;
 		e.target.matches( '.popup--close-button' ) ? closePopup() : null;

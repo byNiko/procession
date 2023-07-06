@@ -1,5 +1,10 @@
 @use '../abstracts/' as *;
 
+.main-menu > .menu-item:not(.button) {
+	position: relative;
+	// transform: translatey(2rem);
+}
+
 .menu-toggle {
 
 	&:focus {
@@ -16,6 +21,7 @@
 	position: relative;
 	z-index: 10;
 }
+
 
 .main-navigation {
 	display: flex;
@@ -34,28 +40,32 @@
 		width: 100%;
 	}
 
+
 	.sub-menu {
-		border-radius: calc(var(--border-radius) / 2);
-		font-size: var(--font-xs);
+		// border-radius: calc(var(--border-radius) / 2);
+		// font-size: var(--font-xs);
 		opacity: 0;
 		visibility: hidden;
-		background: var(--color-blue-300);
+		pointer-events: none;
+		// background: var(--color-blue-300);
 		position: absolute;
-		transition: opacity .2s .1s;
-		color: white;
+		// transition: opacity .2s .1s;
+		// color: white;
 		z-index: 1;
+		transition: opacity .2s;
 
 		.menu-item a {
 			display: inline-block;
-			padding: 0.6em 1em;
-			color: white;
+			// padding: 0.6em 1em;
+			font-size: var(--font-xs);
+			// color: white;
 		}
 	}
 
-	li:hover .sub-menu {
-		visibility: visible;
-		opacity: 1;
-	}
+	// li:hover .sub-menu {
+	// 	visibility: visible;
+	// 	opacity: 1;
+	// }
 
 	.button.menu-item {
 		display: flex;
@@ -72,6 +82,12 @@
 	}
 }
 
+.is-hovered .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
 .menu,
 .menu ul,
 .menu li {
@@ -84,15 +100,12 @@
 	display: flex;
 
 	.menu-item a {
-		padding: var(--spacer);
+		line-height: 1.5;
 		transition: all .2s;
 	}
 }
 
 .sub-menu {
-	.menu-item:hover a {
-		color: var(--color-primary);
-	}
 
 	.current-menu-item a {
 		text-decoration: underline;
@@ -105,7 +118,7 @@
 .main-navigation .menu-item.current-menu-item,
 .main-navigation .current_page_ancestor {
 	text-decoration: underline;
-	text-underline-offset: 8px;
+	text-underline-offset: 6px;
 	text-decoration-color: var(--color-accent);
 }
 
@@ -121,14 +134,18 @@
 	padding: clamp(3rem, 5vw, 5rem);
 	padding-top: 10rem;
 
-	a {
-		font-size: 4rem;
-	}
+	// a {
+	// 	font-size: 4rem;
+	// }
 
 	.main-menu {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
+
+		& > .menu-item > a {
+			font-weight: var(--fw-heavy);
+		}
 
 		@include bp(sm) {
 			position: relative;
@@ -140,7 +157,7 @@
 			height: auto;
 			display: flex;
 			justify-content: space-between;
-			margin-left: 8vw;
+			margin-left: 6vw;
 			align-items: center;
 		}
 	}
@@ -152,7 +169,7 @@
 	@include bp(sm) {
 		position: relative;
 		flex-direction: row;
-		align-items: flex-end;
+		align-items: flex-start;
 		background: transparent;
 		transform: translatex(0);
 		top: unset;
@@ -162,7 +179,6 @@
 
 		a {
 			font-size: var(--font-sm);
-			font-weight: var(--fw-normal);
 		}
 	}
 }

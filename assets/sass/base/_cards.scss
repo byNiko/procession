@@ -1,16 +1,40 @@
-.cards.is-horizonal {}
+.card.is-horizontal {
+
+	// & + .card.is-horizontal {
+	margin-top: calc(.5 * var(--spacer-xl));
+	margin-bottom: calc(.5 * var(--spacer-xl));
+
+	// }
+	.event--location-container {
+		display: none;
+	}
+
+}
 
 .card {}
 
+.card--image {
+	img {
+		width: 100%;
+	}
+}
+
 .card--title {
 	font-size: var(--font-md);
+	margin-bottom: var(--spacer-sm);
+	margin-top: var(--spacer-md);
 }
 
 .card--copy {
 	font-size: var(--font-sm);
 }
+
 .card {
 	&:hover * {
 		color: var(--color-accent);
+	}
+
+	&.column {
+		margin-top: var(--spacer-lg);
 	}
 }

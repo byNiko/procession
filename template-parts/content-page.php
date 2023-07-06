@@ -15,19 +15,18 @@
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 
 		<?php // the_content(); 
-		procession_post_thumbnail('narrow');
+		//	procession_post_thumbnail('narrow');
 		?>
 	</header><!-- .entry-header -->
 
-	<?php // procession_post_thumbnail('narrow'); 
+	<?php procession_post_thumbnail('narrow');
 	?>
 
 	<div class="entry-content">
 		<?php
 		get_template_part('template-parts/flexible-layouts/flexible-loop');
 		?>
-
-		<?php get_template_part('/template-parts/partials/partial', strtolower($post->post_title)); ?>
+		<?php get_template_part('/template-parts/partials/partial',  strtolower($post->post_title)); ?>
 	</div><!-- .entry-content -->
 	<?php if (get_edit_post_link()) : ?>
 		<footer class="entry-footer">

@@ -1,23 +1,29 @@
+#staff {
+	margin-top: var(--spacer-xl);
+}
+
 .staff-members.row {
 	display: flex;
-	grid-template-columns: repeat(5, 1fr);
+	// grid-template-columns: repeat(5, 1fr);
 	grid-gap: 2rem;
 }
 
 .staff-member.column {
-	flex: 0 1;
+	flex: 0 0 auto;
+	width: auto;
 	font-size: var(--font-sm);
 }
 
 .staff--name {
+	font-size: var(--font-md);
 	margin-bottom: 0;
 	line-height: 1;
-	font-weight: 400;
+	font-weight: var(--fw-heavy);
 }
 
 .staff--title {
 	margin: 0;
-	text-align: right;
-	font-size: var(--font-xs);
+	text-align: left;
+	font-size: var(--font-ms);
 	font-weight: 300;
 }

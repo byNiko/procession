@@ -25,19 +25,17 @@
 			</div>
 			<div class="border-vert hide-mobile"></div>
 			<div class="column col2">
-				<div class="footer-menu">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'footer-primary-menu',
-							'menu_class' => "footer-menu menu"
-						)
-					);
-					?>
-				</div>
-				<?php //echo FrmFormsController::get_form_shortcode(array('id' => 2)); 
+				<!-- <div class="footer-menu"> -->
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'footer-primary-menu',
+						'menu_class' => "footer-menu menu"
+					)
+				);
 				?>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div><!-- .site-info -->

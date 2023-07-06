@@ -1,40 +1,64 @@
 @use '../abstracts/' as *;
 
-.container .container {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.row {
-	position: relative;
-}
-
-.row .column.column-100 {
-	flex: 0 0 100%;
-	max-width: 100%;
-}
-
 .container {
 	max-width: 112.0rem;
 	padding: 0 var(--gutter);
+
+	.container {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .container-fluid {
 	padding: 0 var(--gutter);
 }
 
+
+.row {
+	position: relative;
+
+
+	@include bp(sm) {
+		width: calc(100% + var(--gutter));
+		margin-left: calc(-1 * var(--gutter)/2);
+
+		.column {
+			padding: 0 calc(var(--gutter) / 2)
+		}
+	}
+
+
+
+	.column.column-100 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+
 .grid {
 	display: grid;
 }
 
 .grid-2 {
-	grid-template-columns: 1fr 1fr;
-	grid-gap: calc(2* var(--spacer));
+	@include bp(sm) {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: var(--gutter);
+	}
+
 }
 
 .grid-3 {
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: calc(2* var(--spacer));
+	grid-gap: calc(var(--gutter));
+
+	@include bp(sm) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include bp(md) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 $widths: (
@@ -91,4 +115,5 @@ $widths: (
 	.row .column[class*=" column-"] {
 		max-width: none;
 	}
+
 }

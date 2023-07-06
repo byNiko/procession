@@ -5,7 +5,13 @@
 
 .artist--wrapper {
 	.artist--name {
-		margin-bottom: var(--vert-spacing);
+		margin-bottom: var(--spacer-sm);
+	}
+
+	.artist--img-wrap {
+		img {
+			margin: 0;
+		}
 	}
 
 	.artist--bio {
@@ -16,4 +22,30 @@
 			font-size: var(--font-ms);
 		}
 	}
+}
+
+.single-event {
+	.connected-artist--section-title {}
+
+	.connected-artists--items.row {
+		flex-wrap: wrap;
+	}
+}
+
+.connected-artist--image-wrap {
+	img {
+		margin-top: 0;
+	}
+}
+
+.page-collaborators {
+	.artist--wrapper {
+		margin-top: var(--spacer-lg);
+
+		.artist--name {
+			margin-top: var(--spacer-md);
+		}
+	}
+
+
 }

@@ -6,25 +6,33 @@ input[type=submit],
 .has-dark-blue-background-color {
 	text-transform: unset;
 	font-size: calc(.8 * var(--font-ms));
-		font-weight: 800;
-		background: var(--theme);
-	border-color: var(--color-accent);
+	font-weight: 800;
+	background: var(--theme);
+	border-color: var(--color-primary);
 	border-radius: .8em; //var(--border-radius);
 	transition: all .12s;
 	height: unset;
 	line-height: unset;
 	padding: 0.95em 1.9em;
+	margin-top: var(--spacer-lg);
+
+	&.popup--close-button,
+	&.frm_button_submit {
+		margin-top: 0;
+	}
+
 	&,
-		a {
-			color: white;
-			font-weight: 800;
-		}
+	a {
+		color: white;
+		font-weight: 800;
+	}
 
 	&:hover {
 		background: var(--color-accent);
 		opacity: .9;
 	}
 }
+
 .button-primary {
 	--theme: var(--color-primary);
 }
@@ -48,12 +56,17 @@ input[type=submit],
 }
 
 .button.button-hollow {
-	color: var(--theme);
+	color: var(--color-primary);
 	background: transparent;
 	border-color: currentColor;
+	font-weight: var(--fw-normal);
 
 	&:hover {
-		background: var(--theme);
+		background: var(--color-accent);
 		color: var(--color-white);
 	}
+}
+
+p:first-of-type + .button {
+	margin-top: calc(var(--spacer-lg) - var(--spacer-ptag));
 }

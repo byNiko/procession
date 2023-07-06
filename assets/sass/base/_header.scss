@@ -1,5 +1,6 @@
 .site-branding {
 	width: 100px;
+	margin-top: 9px;
 }
 
 .site-header {
@@ -7,9 +8,13 @@
 	justify-content: space-between;
 	padding: var(--gutter);
 	padding-bottom: 0;
+	transition: height .2s;
+	height: auto;
+}
+
+.header-wave {
+	.wave {
+		margin: var(--spacer-md) 0;
+		margin-top: var(--spacer-lg);
 	}
-	
-	.header-wave {
-		padding-bottom: 2rem;
-		;
 }

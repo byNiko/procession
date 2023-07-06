@@ -1,10 +1,20 @@
 @use '../abstracts/' as *;
 
+.page-events {
+	.archived-events {
+		display: none;
+	}
+}
+
 .event--grid-copy {
 	@include bp(sm) {
-		grid-template-columns: 250px 1fr;
-		grid-gap: calc(5 * var(--spacer));
+		grid-template-columns: 315px 1fr;
+		grid-gap: var(--spacer-lg);
 	}
+}
+
+.event--main-copy {
+	margin-bottom: var(--spacer-xxl);
 }
 
 .event--header {
@@ -43,8 +53,10 @@
 
 
 .event--card {
+
+
 	& + .event--card {
-		margin-top: calc(5 * var(--spacer));
+		margin-top: var(--spacer-lg);
 	}
 }
 
@@ -88,20 +100,19 @@
 }
 
 .event--meta-container + .event--meta-container {
-	margin-top: calc(2 * var(--spacer));
+	margin-top: var(--spacer-md);
 }
 
-.event--listing + .event--listing {
-	margin-top: calc(5 * var(--spacer));
-}
+
 
 .event--meta-title {
 	font-weight: var(--fw-heavy);
+	margin-bottom: var(--spacer-sm);
 }
 
 .event--notes {
 	background: var(--color-grey-800);
-	padding: calc(2* var(--spacer));
+	padding: calc(4* var(--spacer-sm));
 	max-width: 300px;
 
 	.event--meta-title {
@@ -115,6 +126,8 @@
 }
 
 .event--note-link {
+	margin-top: var(--spacer-md);
+	display: inline-block;
 	text-decoration: underline;
 }
 
@@ -167,9 +180,22 @@
 	display: flex;
 
 	select {
+		color: var(--color-primary);
 		border: 1px solid currentColor;
 		width: 300px;
 		border-radius: var(--border-radius);
+		height: unset;
+		line-height: unset;
+		padding: 0.95em 1.9em;
+		margin-bottom: var(--spacer-lg);
+		background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="var(--color-primary)" d="M0,0l6,8l6-8"/></svg>') 100% no-repeat;
+	}
+}
+
+
+.event--rsvp {
+	.button {
+		margin-top: 0;
 	}
 }
 
@@ -211,13 +237,35 @@
 	}
 }
 
+.event--listing {
 
-.single-event {
+	&:first-of-type,
+	& + .event--listing {
+		margin-top: var(--spacer-xl);
+	}
+
+	.location--name {
+		display: none;
+	}
+}
+
+.single-event,
+.event--card.is-horizontal {
 	.event--header {
 
 		.event--location-container,
 		.event--date {
 			display: none;
 		}
+	}
+
+	.event--connected-artists-wrapper {
+		.wave {
+			display: none;
+		}
+	}
+
+	.artist--img-wrap {
+		display: none;
 	}
 }

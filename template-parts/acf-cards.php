@@ -12,11 +12,11 @@ if (have_rows('cards')) :  ?>
 				<div class="card-copy">
 
 					<?php if (get_sub_field('title')) : ?>
-						<h3 class="h3 card--title mt-1"><?php the_sub_field('title'); ?></h3>
+						<h3 class="h3 card--title "><?php the_sub_field('title'); ?></h3>
 					<?php endif; ?>
 
 					<?php if (get_sub_field('copy')) : ?>
-						<p class="card--copy mt-small"><?php the_sub_field('copy', false, false); ?></p>
+						<p class="card--copy"><?php the_sub_field('copy', false, false); ?></p>
 					<?php endif; ?>
 
 					<?php if (get_sub_field('link')) : ?>

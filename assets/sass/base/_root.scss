@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 :root {
 	// CLORS
 	--color-blue-300: hsl(211, 88%, 65%);
@@ -10,20 +12,33 @@
 	--color-black: hsla(0, 0%, 0%);
 
 	--color-orange: hsl(15, 100%, 56%);
-		--color-teal: hsl(175, 100%, 34%);
+	--color-teal: hsl(175, 100%, 34%);
 	--color-primary: var(--color-blue-600);
 	--color-accent: var(--color-blue-300);
---color-tertiary: var(--color-orange);
+	--color-tertiary: var(--color-orange);
 	--color-quaternary: var(--color-teal);
 
 	--bg-light: var(--color-white);
 	--bg-dark: var(--color-grey-600);
 	// SPACING
-	--spacer: 1rem;
+	--spacer-sm: 4px;
+	--spacer-md: 2rem;
+	--spacer-lg: 4rem;
+	--spacer-xl: 6rem;
+	--spacer-xxl: 8rem;
+	--spacer--images: var(--spacer-xl);
+	--spacer-ptag: var(--spacer-md);
+
 	--gutter: 2rem;
+
+	@include bp(sm) {
+		--gutter: 3rem;
+	}
+
 	--popup-padding: clamp(3rem, 6vw, 5rem);
-		--section-padding: calc(5* var(--spacer));
-		--vert-spacing: clamp(2.5rem, 2vw, 4rem);
-		--vert-spacing: 1.8rem;
-		--border-radius: .51em;
+	--section-padding: 0;
+	--vert-spacing: clamp(2.5rem, 2vw, 4rem);
+
+
+	--border-radius: .51em;
 }

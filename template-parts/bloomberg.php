@@ -10,7 +10,10 @@
 			</div>
 			<div class="column ">
 				<h3><?php the_field('title', 'option'); ?></h3>
-				<p class="fw-normal"><?php the_field('copy', 'option', false); ?></p>
+				<div class="new-copy">
+					<?php the_sub_field('copy'); ?>
+				</div>
+				<!-- <p class="fw-normal"><?php the_field('copy', 'option', false); ?></p> -->
 				<a class="button  button-primary" href="<?php echo get_field('link', 'option', false, false)['url']; ?>">
 					<?php echo get_field('link', 'option')['title']; ?>
 				</a>

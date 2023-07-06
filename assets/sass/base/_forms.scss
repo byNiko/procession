@@ -65,7 +65,8 @@
 	text-align: center;
 }
 
-.frm_error {
+.frm_error,
+.frm_error_style {
 	color: red;
-	font-size: var(--font-sm);
+	font-size: var(--font-xs);
 }

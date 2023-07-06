@@ -14,11 +14,9 @@ $artists = get_posts($args);
 ?>
 
 <?php if ($artists) : ?>
-<div class="grid grid-3">
-	<?php foreach ($artists as $artist) : ?>
-	<?php get_template_part('/template-parts/partials/partial-artist', null, array('artist' => $artist)); ?>
-	<?php endforeach; ?>
-</div>
-<?php endif; ?>
-
-<?php get_template_part('/template-parts/staff-info'); ?>
+	<div class="grid grid-3 row">
+		<?php foreach ($artists as $artist) : ?>
+			<?php get_template_part('/template-parts/partials/partial-artist', null, array('artist' => $artist)); ?>
+		<?php endforeach; ?>
+	</div>
+<?php endif;

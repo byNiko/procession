@@ -9,8 +9,8 @@ if (have_rows('artists_group')) : while (have_rows('artists_group')) : the_row()
 				</h2>
 			<?php endif; ?>
 			<?php if (get_sub_field('section_image')) : ?>
-				<div class="connected-artist--image-wrap mt-3">
-					<?php echo wp_get_attachment_image(get_sub_field('section_image'), 'full'); ?>
+				<div class="connected-artist--image-wrap">
+					<?php echo wp_get_attachment_image(get_sub_field('section_image'), 'full wp-post-image'); ?>
 				</div>
 			<?php endif; ?>
 			<div class="connected-artists--items row">
