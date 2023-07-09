@@ -14,4 +14,4 @@ jobs:
         target-server: pla.byniko.com
         remote-user: bynikoco
         private-ssh-key: ${{ secrets.SSH_KEY }}
-        destination-path: ~/destinationFolder/
+        destination-path: ~/wp-content/themes/procession-git-deploy/
