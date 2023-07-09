@@ -31,6 +31,7 @@
 	font-size: var(--font-xl);
 	font-weight: 800;
 
+
 	.event--listing &,
 	.single-event &,
 	.event--card & {
@@ -41,6 +42,9 @@
 
 	.event--listing &,
 	.event--card & {
+		margin-top: .1em;
+		margin-bottom: .1em;
+		line-height: 1;
 		font-size: var(--font-lg);
 	}
 }
@@ -136,16 +140,14 @@
 
 	.event--header {
 		margin-top: 1.5rem;
-		margin-bottom: 1.5rem;
+		margin-bottom: 0;
 
 		@include bp(sm) {
 			margin-top: 0;
-			margin-bottom: 0;
 		}
 
 		.event--date,
-		.location--address,
-		.location--city-state {
+		.event--location-container {
 			display: none;
 		}
 	}
@@ -219,11 +221,22 @@
 	}
 }
 
+
 .event--listing-grid-row {
 	&:after {
 		content: '';
-		margin-top: 2rem;
-		border-bottom: 2px solid #ccc;
+		margin-top: var(--vert-spacing);
+		border-bottom: 1px solid #ccc;
+	}
+
+	.event--listing:last-of-type & {
+		&:after {
+			display: none;
+		}
+	}
+
+	&:last-of-type:after {
+		content: '';
 	}
 
 	@include bp(sm) {
@@ -238,10 +251,15 @@
 }
 
 .event--listing {
+	--vert-spacing: var(--spacer-lg);
+
+	@include bp(sm) {
+		--vert-spacing: var(--spacer-xl);
+	}
 
 	&:first-of-type,
 	& + .event--listing {
-		margin-top: var(--spacer-xl);
+		margin-top: var(--vert-spacing);
 	}
 
 	.location--name {

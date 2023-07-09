@@ -5,16 +5,17 @@ input[type=reset],
 input[type=submit],
 .has-dark-blue-background-color {
 	text-transform: unset;
-	font-size: calc(.8 * var(--font-ms));
-	font-weight: 800;
+	font-size: calc(var(--font-ms));
+	font-weight: 300;
 	background: var(--theme);
 	border-color: var(--color-primary);
 	border-radius: .8em; //var(--border-radius);
 	transition: all .12s;
 	height: unset;
 	line-height: unset;
-	padding: 0.95em 1.9em;
+	padding: 1.75rem 2.5rem;
 	margin-top: var(--spacer-lg);
+	border: none;
 
 	&.popup--close-button,
 	&.frm_button_submit {
@@ -24,7 +25,7 @@ input[type=submit],
 	&,
 	a {
 		color: white;
-		font-weight: 800;
+		font-weight: 400;
 	}
 
 	&:hover {
@@ -47,8 +48,8 @@ input[type=submit],
 
 .button.button-sm {
 	font-size: var(--font-sm);
-	padding: .5em 1.5em;
-	border-radius: .52em;
+	// padding: .5rem 1.5rem;
+	// border-radius: .52em;
 }
 
 .button.button-xs {
@@ -60,6 +61,7 @@ input[type=submit],
 	background: transparent;
 	border-color: currentColor;
 	font-weight: var(--fw-normal);
+	border: 1px solid;
 
 	&:hover {
 		background: var(--color-accent);

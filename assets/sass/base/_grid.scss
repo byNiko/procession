@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 
 .container {
-	max-width: 112.0rem;
+	max-width: 130.0rem;
 	padding: 0 var(--gutter);
 
 	.container {
@@ -42,10 +42,10 @@
 }
 
 .grid-2 {
-	@include bp(sm) {
-		grid-template-columns: 1fr 1fr;
-		grid-gap: var(--gutter);
-	}
+	// @include bp(sm) {
+	grid-template-columns: 1fr 1fr;
+	grid-gap: var(--gutter);
+	// }
 
 }
 

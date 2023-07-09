@@ -38,7 +38,7 @@ main {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: var(--spacer-xl);
+	padding-bottom: var(--spacer-xxl);
 }
 
 .bg-light {
@@ -80,7 +80,7 @@ main {
 		radial-gradient(13.16px at 50% -6px, #0000 calc(99% - 3px), #000 calc(101% - 3px) 99%, #0000 101%) 50% calc(50% + 6.5px)/40px 13px repeat-x;
 	-webkit-mask: var(--mask);
 	mask: var(--mask);
-	background-image: linear-gradient(90deg, green, orange, red, blue, purple, green, orange, red, blue, purple, black), ;
+	background-image: linear-gradient(90deg, var(--color-blue-600), var(--color-blue-300), var(--color-teal), var(--color-orange), var(--color-teal), var(--color-blue-300), var(--color-blue-600));
 	background-size: 300%;
 	height: 20px;
 	width: 100%;

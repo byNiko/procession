@@ -15,7 +15,7 @@
 		--font-base: 1rem;
 	}
 
-	--fw-heavy: 600;
+	--fw-heavy: 700;
 	--fw-normal: 400;
 	--fw-light: 300;
 
@@ -68,7 +68,7 @@ h4,
 h5,
 h6 {
 	font-size: var(--font-md);
-	font-weight: 600;
+	font-weight: var(--fw-heavy);
 	letter-spacing: unset;
 	margin-bottom: var(--spacer-md);
 	margin-top: 0;

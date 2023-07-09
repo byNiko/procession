@@ -1,8 +1,12 @@
 .card.is-horizontal {
 
 	// & + .card.is-horizontal {
-	margin-top: calc(.5 * var(--spacer-xl));
-	margin-bottom: calc(.5 * var(--spacer-xl));
+	margin-top: calc(var(--spacer-xl));
+
+	// margin-bottom: calc(.5 * var(--spacer-xl));
+	&:first-of-type {
+		margin-top: 0;
+	}
 
 	// }
 	.event--location-container {

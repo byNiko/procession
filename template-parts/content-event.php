@@ -42,15 +42,16 @@ $endDayTimestamp = get_field('end_date_time');
 			?>
 			<!-- .entry-content -->
 		</div>
+		<?php $link = get_field('rsvp_link'); ?>
+		<?php if ($link) : ?>
 		<div class="column d-flex flex-end">
 			<div class="event--rsvp-link-wrapper">
-				<?php $link = get_field('rsvp_link'); ?>
-				<?php if ($link) : ?>
-					<a class="event--rsvp-link font-parent" target="<?php echo $link['target']; ?>" href="<?php echo $link['url']; ?>">
-						<?php echo $link['title']; ?>
-					</a>
-				<?php endif; ?>
+				<a class="event--rsvp-link font-parent" target="<?php echo $link['target']; ?>"
+				   href="<?php echo $link['url']; ?>">
+					<?php echo $link['title']; ?>
+				</a>
 			</div>
 		</div>
+		<?php endif; ?>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
