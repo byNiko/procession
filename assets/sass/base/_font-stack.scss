@@ -8,12 +8,12 @@
 	}
 }
 
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplaylight-webfont", 400);
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplaylightitalic-webfont", 400, "italic");
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplayroman-webfont", 600, "normal");
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplayromanitalic-webfont", 600, "italic");
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplaymediu-webfont", 800, "normal");
-@include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/neuehaasdisplaymediumitalic-webfont", 600, "italic");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplaylight-webfont", 300);
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplaylightitalic-webfont", 300, "italic");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplayroman-webfont", 400, "normal");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplayromanitalic-webfont", 400, "italic");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplaymediu-webfont", 600, "normal");
+@include fontface("Nueu Haas Grotesk", "./dist/fonts/cufon/neuehaasdisplaymediumitalic-webfont", 600, "italic");
 // @include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/nhaasgroteskdspro-55rg-webfont", 400);
 // @include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/nhaasgroteskdspro-56it-webfont", 400, "italic");
 // @include fontface("Nueu Haas Grotesk", "./dist/fonts/pro/nhaasgroteskdspro-65md-webfont", 600, "normal");
