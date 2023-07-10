@@ -46,6 +46,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
+		height: 100%;
 	}
 
 
@@ -78,20 +79,18 @@
 	.button.menu-item {
 		display: flex;
 		padding: 1rem 2.75rem;
-
-		position: fixed;
-		bottom: 10px;
 		justify-content: center;
 		width: calc(100% - 3*var(--gutter));
+		margin-top: auto;
+		margin-left: auto;
+		margin-right: auto;
 
 		a {
 			color: white;
 		}
 
 		@include bp(sm) {
-			margin-right: unset;
-			position: unset;
-			bottom: unset;
+			margin: unset;
 			justify-content: unset;
 			width: auto;
 		}
@@ -156,6 +155,7 @@
 	// }
 
 	.main-menu {
+		height: 100%;
 		display: flex;
 		flex: 1;
 		flex-direction: column;

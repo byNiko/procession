@@ -38,7 +38,7 @@
 			}
 		}
 
-		if ( event.type === 'touchstart' || event.type === 'click' ) {
+		if ( event.type === 'click' ) {
 			const menuItem = this.parentNode;
 			event.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
