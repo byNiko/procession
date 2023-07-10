@@ -55,6 +55,10 @@ p {
 		margin-bottom: var(--spacer-ptag);
 	}
 
+	&:first-of-type:last-of-type {
+		margin-bottom: 0;
+	}
+
 	&:empty {
 		display: none;
 	}

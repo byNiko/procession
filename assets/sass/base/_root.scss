@@ -25,7 +25,7 @@
 	--spacer-md: 2rem;
 	--spacer-lg: 4rem;
 	--spacer-xl: 6rem;
-	--spacer-xxl: 8rem;
+	--spacer-xxl: var(--spacer-xl);
 	--spacer--images: var(--spacer-xl);
 	--spacer-ptag: var(--spacer-md);
 
@@ -33,6 +33,7 @@
 
 	@include bp(sm) {
 		--gutter: 3rem;
+		--spacer-xxl: 8rem;
 	}
 
 	--popup-padding: clamp(3rem, 6vw, 5rem);

@@ -82,6 +82,7 @@ $footerBp: '930px';
 	justify-content: center;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-gap: var(--spacer-md);
 
 	@include bp(xs) {
 		display: flex;

@@ -13,8 +13,10 @@
 	}
 }
 
-.event--main-copy {
-	margin-bottom: var(--spacer-xxl);
+.event--main-copy {}
+
+.event--connected-artists-wrapper {
+	margin-top: var(--spacer-xl);
 }
 
 .event--header {
@@ -117,10 +119,13 @@
 .event--notes {
 	background: var(--color-grey-800);
 	padding: calc(4* var(--spacer-sm));
-	max-width: 300px;
+
+	@include bp(sm) {
+		max-width: 300px;
+	}
 
 	.event--meta-title {
-		margin-bottom: var(--spacer);
+		// margin-bottom: var(--spacer-sm);
 	}
 }
 
@@ -241,7 +246,7 @@
 
 	@include bp(sm) {
 		display: grid;
-		grid-template-columns: 270px 1fr 150px;
+		grid-template-columns: 270px 1fr 140px;
 		grid-gap: 5vw;
 
 		&:after {
@@ -264,6 +269,24 @@
 
 	.location--name {
 		display: none;
+	}
+}
+
+.single-event {
+	.entry-content {
+		margin-top: var(--spacer-lg);
+	}
+
+	.artist--wrapper {
+		// margin-top: var(--spacer-lg);
+
+		.artist--name {
+			margin-top: var(--spacer-md);
+		}
+	}
+
+	.card:first-of-type {
+		margin-top: 0;
 	}
 }
 

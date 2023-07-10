@@ -1,6 +1,13 @@
+@use "../abstracts/" as *;
+
 .site-branding {
-	width: 150px;
-	margin-top: -10px;
+	width: 100px;
+
+	@include bp(sm) {
+		width: 150px;
+	}
+
+	// margin-top: -10px;
 }
 
 .site-header {
