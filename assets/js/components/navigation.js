@@ -81,6 +81,7 @@
 
 		event.preventDefault();
 		if ( event.type === 'focus' || event.type === 'blur' ) {
+			return;
 			let self = this;
 			// Move up through the ancestors of the current link until we hit .nav-menu.
 			while ( !self.classList.contains( 'nav-menu' ) ) {
@@ -93,6 +94,7 @@
 		}
 
 		if ( event.type === 'touchstart' || event.type === 'click' ) {
+			return;
 			console.log( 'link click', event );
 			const menuItem = this.parentNode;
 			event.preventDefault();

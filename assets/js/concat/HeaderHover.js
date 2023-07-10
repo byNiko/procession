@@ -2,7 +2,6 @@
 	const mediaQuery = window.matchMedia( '(min-width: 40rem)' )
 	// Check if the media query is true
 	if ( mediaQuery.matches ) {
-		console.log( 'match' )
 		const masthead = document.getElementById( 'masthead' );
 		const subMenus = masthead.querySelectorAll( '.sub-menu' );
 		const mH = masthead.clientHeight;
