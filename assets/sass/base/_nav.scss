@@ -121,7 +121,7 @@
 	.menu-item a {
 		line-height: 2.5;
 		transition: all .2s;
-		// display: inline-block;
+		display: inline-block;
 		width: 100%;
 
 		@include bp(sm) {
