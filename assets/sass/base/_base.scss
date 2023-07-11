@@ -87,6 +87,11 @@ main {
 	margin-top: var(--spacer-xxl);
 	margin-bottom: var(--spacer-xxl);
 	animation: animateBackgroundColor 65s linear infinite;
+
+	.flexible-loop-item-wrapper & {
+		margin-left: -100vw;
+		width: 200vw;
+	}
 }
 
 .bloomberg-container {

@@ -1,3 +1,7 @@
+:root {
+	--fw-button: var(--fw-heavy);
+}
+
 .button,
 button,
 input[type=button],
@@ -5,8 +9,8 @@ input[type=reset],
 input[type=submit],
 .has-dark-blue-background-color {
 	text-transform: unset;
-	font-size: calc(var(--font-ms));
-	font-weight: 300;
+	font-size: calc(var(--font-sm));
+	font-weight: var(--fw-button);
 	background: var(--theme);
 	border-color: var(--color-primary);
 	border-radius: .8em; //var(--border-radius);
@@ -25,7 +29,7 @@ input[type=submit],
 	&,
 	a {
 		color: white;
-		font-weight: 400;
+		font-weight: var(--fw-button);
 	}
 
 	&:hover {
@@ -69,6 +73,6 @@ input[type=submit],
 	}
 }
 
-p:first-of-type + .button {
+p > .button.button-short-code {
 	margin-top: calc(var(--spacer-lg) - var(--spacer-ptag));
 }

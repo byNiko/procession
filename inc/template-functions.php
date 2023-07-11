@@ -130,7 +130,7 @@ add_filter('get_the_archive_title', 'procession_remove_archive_label');
 
 function get_popup_button($text = "Join the Procession", $type = "", $theme = "primary", $size) {
 	$html = '';
-	$html .= '<button class="button button-' . $theme . ' button-' . $type . ' button-' . $size . ' openJoinPopup">' . $text . '</button>';
+	$html .= '<button class="button button-short-code button-' . $theme . ' button-' . $type . ' button-' . $size . ' openJoinPopup">' . $text . '</button>';
 	return $html;
 }
 function the_popup_button($text = "Join the Procession", $type, $theme, $size) {
@@ -151,7 +151,7 @@ add_shortcode('popup_button', 'byniko_create_popup_button');
 
 function byniko_get_button($text = "Button", $url = "", $type = "", $theme = "primary", $size) {
 	$html = '';
-	$html .= '<a href="' . $url . '" class="button button-' . $theme . ' button-' . $type . ' button-' . $size . ' ">' . $text . '</a>';
+	$html .= '<a href="' . $url . '" class="button button-short-code button-' . $theme . ' button-' . $type . ' button-' . $size . ' ">' . $text . '</a>';
 	return $html;
 }
 function byniko_create_button($atts) {

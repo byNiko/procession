@@ -114,6 +114,10 @@
 .event--meta-title {
 	font-weight: var(--fw-heavy);
 	margin-bottom: var(--spacer-sm);
+
+	&.event--cost {
+		margin-bottom: calc(var(--spacer-sm) + 10px);
+	}
 }
 
 .event--notes {
