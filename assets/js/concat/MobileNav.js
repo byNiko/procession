@@ -1,6 +1,6 @@
 
 !( function () {
-	window.addEventListener( 'click', e => { console.log( 'click', e ) } )
+	window.addEventListener( 'click', e => { console.log( 'click', e.target, e.target.parentNode ) } )
 	const mediaQuery = window.matchMedia( '(min-width: 40rem)' )
 	// Check if the media query is true
 	if ( !mediaQuery.matches ) {
@@ -27,15 +27,22 @@
 		}
 
 		function toggleFocus( event ) {
-
+			if ( this.closest( '.sub-menu' ) ) {
+				console.log( 'inner link' )
+			} else {
+				console.log( 'nope' )
+			}
 			// if ( event.type === 'focus' || event.type === 'blur' || event.type === 'click' ) {
 			if ( event.type === 'click' ) {
-				event.preventDefault();
+
 				let self = this;
+
+				event.preventDefault();
+
 
 				// Move up through the ancestors of the current link until we hit .nav-menu.
 				while ( !self.classList.contains( 'main-menu' ) ) {
-
+					console.log( 'ere', self )
 					// On li elements toggle the class .focus.
 					if ( 'li' === self.tagName.toLowerCase() ) {
 						if ( self.classList.contains( 'focus' ) ) {

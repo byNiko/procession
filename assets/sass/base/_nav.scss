@@ -217,6 +217,7 @@
 
 		&.focus {
 			.sub-menu {
+				pointer-events: all;
 				margin-left: 10px;
 				position: relative;
 				opacity: 1;

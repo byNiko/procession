@@ -23,6 +23,11 @@
 		transition: opacity .4s, transform .4s ease-in-out;
 	}
 
+	.popup--text,
+	form {
+		margin-top: var(--spacer-lg);
+	}
+
 	form {
 		margin-bottom: 0;
 		padding: 0;
@@ -32,6 +37,8 @@
 .inner-popup {
 	padding: var(--popup-padding)
 }
+
+
 
 body.overlay--is-active {
 	// position: fixed;
