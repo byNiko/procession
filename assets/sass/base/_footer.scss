@@ -3,6 +3,7 @@ $footerBp: '930px';
 
 .footer-logos {
 
+	margin-top: var(--spacer-md);
 
 	.column {
 		display: flex;
@@ -22,6 +23,10 @@ $footerBp: '930px';
 	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
+
+	@include bp(md) {
+		max-width: none;
+	}
 }
 
 .border-vert {

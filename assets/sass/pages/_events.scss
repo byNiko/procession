@@ -278,7 +278,11 @@
 
 .single-event {
 	.entry-content {
-		margin-top: var(--spacer-lg);
+		@include bp(sm, 'max-width') {
+			margin-top: var(--spacer-lg)
+		}
+
+		;
 	}
 
 	.artist--wrapper {
