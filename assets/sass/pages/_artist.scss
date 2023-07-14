@@ -1,3 +1,5 @@
+@use '../abstracts/' as *;
+
 .artist--name {
 	font-weight: 800;
 }
@@ -34,10 +36,23 @@
 }
 
 
+.page-about {
+	.artist--wrapper {
+		margin-top: var(--spacer-lg);
+
+		@include bp(sm) {
+			margin-top: 0;
+		}
+	}
+
+	.artist--wrapper:first-of-type {
+		margin-top: 0;
+	}
+}
 
 .page-collaborators {
 	.artist--wrapper {
-		margin-top: var(--spacer-lg);
+		// margin-top: var(--spacer-lg);
 
 		.artist--name {
 			margin-top: var(--spacer-md);
