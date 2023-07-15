@@ -1,9 +1,11 @@
+
+
 !( () => {
 	/** add query param to select links */
 	const links = document.querySelectorAll( '.queryParam' );
 	links.forEach( item => {
 		const a = item.querySelector( 'a' );
-		src = new URL( a.href );
+		const src = new URL( a.href );
 		src.searchParams.append( 'filter', 'festival' );
 		a.href = src
 

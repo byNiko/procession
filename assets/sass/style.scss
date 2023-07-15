@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @use 'node_modules/hamburgers/_sass/hamburgers/hamburgers';
 
 @use "assets/sass/vendor/hamburger";
+@use "assets/sass/vendor/headroom";
 @use "assets/sass/base/root";
 @use "assets/sass/base/custom-reset";
 @use "assets/sass/base/display";

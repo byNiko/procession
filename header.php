@@ -30,38 +30,44 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<header id="masthead" class="site-header container">
-		<div class="site-branding">
-			<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php the_custom_logo(); ?></a>
-		</div><!-- .site-branding -->
+	<div id="inner-masthead">
+		<header id="masthead" class="site-header container">
 
-		<button class="menu-toggle hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="primary-menu">
-			<span class="hamburger-box">
-				<span class="hamburger-inner"></span>
-			</span>
-		</button>
-		<nav id="site-navigation" class="main-navigation">
+			<div class="site-branding">
+				<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php the_custom_logo(); ?></a>
+			</div><!-- .site-branding -->
 
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class' => 'menu main-menu'
-				)
-			);
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_id'        => 'secondary-menu',
-					'menu_class' => 'menu secondary-menu'
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			<button class="menu-toggle hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="primary-menu">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+			<nav id="site-navigation" class="main-navigation">
+
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class' => 'menu main-menu'
+					)
+				);
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'secondary-menu',
+						'menu_class' => 'menu secondary-menu'
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+
+	</div> <!-- #inner-masthead -->
+
 	</header><!-- #masthead -->
-	<div class="header-wave">
-		<?php procession_get_wavy_line(); ?>
-	</div>
+
 	<div id="page" class="site-wrapper">
+		<div class="header-wave">
+			<?php procession_get_wavy_line(); ?>
+		</div>
 		<div class="inner-page--wrapper">

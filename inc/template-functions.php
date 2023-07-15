@@ -315,3 +315,23 @@ function byniko_get_page_by_title($page_title, $output = OBJECT, $post_type = 'p
 
 	return get_post($pages[0], $output);
 }
+
+
+/**
+ * /* The byniko_set_scripts_type_attribute function is a PHP function that modifies the script tag for a specific script
+ * handle. It checks if the handle is `byniko-sensors-script` and if it is, it replaces the script tag
+ * with a new one that has a `type` attribute set to `module`. This function is used as a filter for
+ * the `script_loader_tag` hook.
+ *
+ * @param  string $tag
+ * @param  string $handle
+ * @param  string $src
+ * @return string
+ */
+function procession_set_scripts_type_attribute($tag, $handle, $src) {
+	if ('procession-bundle' === $handle) {
+		$tag = '<script type="module" src="' . $src . '"></script>';
+	}
+	return $tag;
+}
+add_filter('script_loader_tag', 'procession_set_scripts_type_attribute', 10, 3);
