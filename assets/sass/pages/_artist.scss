@@ -23,10 +23,18 @@
 }
 
 .single-event {
+	.artist--wrapper {
+		margin-top: 0;
+	}
+
 	.connected-artist--section-title {}
 
 	.connected-artists--items.row {
 		flex-wrap: wrap;
+	}
+
+	.artist--bio {
+		font-size: var(--font-md);
 	}
 }
 

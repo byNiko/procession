@@ -1,6 +1,7 @@
 body {
 	position: relative;
 	background-color: var(--color-grey-600);
+	overflow-x: hidden;
 
 	&:before {
 		opacity: 1;
