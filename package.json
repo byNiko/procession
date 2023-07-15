@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "hamburgers": "^1.2.1",
-    "headroom.js": "^0.12.0",
     "milligram": "^1.4.1",
     "normalize.css": "^8.0.1"
   }
