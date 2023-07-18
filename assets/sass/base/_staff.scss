@@ -15,10 +15,6 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	@include bp(md) {
-		grid-template-columns: repeat(4, 1fr);
-	}
-
 }
 
 .staff-member.column {
