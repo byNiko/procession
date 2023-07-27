@@ -58,8 +58,9 @@
 					</a>
 					<?php endif; ?>
 				</div>
-				<?php endif; ?>
 			</div>
+			<?php endif; ?>
+
 			<?php if (have_rows('notes_group')) : ?>
 			<?php while (have_rows('notes_group')) : the_row(); ?>
 			<?php if (get_sub_field('note') !== '') : ?>
