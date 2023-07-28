@@ -253,7 +253,8 @@ img {
 	}
 
 	.overlay-text {
-		padding: var(--spacer-xl);
+		padding: var(--spacer-md);
 		position: absolute;
+		font-size: var(--font-lg);
 	}
 }
