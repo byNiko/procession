@@ -129,7 +129,14 @@ if (!function_exists('procession_post_thumbnail')) :
 ?>
 
 			<div class="post-thumbnail">
+				<?php $caption = get_the_post_thumbnail_caption(); ?>
+				<?php if ($caption) : ?>
+					<div class="caption">
+						<?php echo get_the_post_thumbnail_caption(); ?>
+					</div>
+				<?php endif; ?>
 				<?php the_post_thumbnail($size, array('class' => '')); ?>
+
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
