@@ -227,12 +227,14 @@ img {
 		position: absolute;
 		bottom: 0;
 		opacity: 0;
+		left: 0;
 		right: 0;
 		padding: var(--spacer-ms);
 		color: var(--color-white);
-		font-size: calc(.8 * var(--font-xs));
-		background: hsl(0, 0%, 0%, .85);
-		background: var(--color-primary);
+		font-weight: 300;
+		font-size: calc(.9 * var(--font-xs));
+		background: hsl(0, 0%, 0%, .70);
+		// background: var(--color-primary);
 		pointer-events: none;
 		transition: opacity .2s;
 	}
