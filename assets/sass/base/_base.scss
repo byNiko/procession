@@ -26,6 +26,9 @@ main {
 }
 
 
+img {
+	display: block;
+}
 
 .section-padding,
 .section-divider {
@@ -197,6 +200,10 @@ main {
 	.entry-header + .post-thumbnail > & {
 		margin-top: 0;
 	}
+
+	.post-thumbnail & {
+		margin-bottom: 0;
+	}
 }
 
 
@@ -206,4 +213,47 @@ main {
 
 .upcoming-workshops {
 	margin-top: var(--spacer-xl);
+}
+
+
+.post-thumbnail {
+	--spacer-ms: 1rem;
+	position: relative;
+	margin-bottom: var(--spacer--images);
+
+
+
+	.caption {
+		position: absolute;
+		bottom: 0;
+		opacity: 0;
+		right: 0;
+		padding: var(--spacer-ms);
+		color: var(--color-white);
+		font-size: calc(.8 * var(--font-xs));
+		background: hsl(0, 0%, 0%, .85);
+		background: var(--color-primary);
+		pointer-events: none;
+		transition: opacity .2s;
+	}
+
+	&:hover .caption {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+
+}
+
+.special-image--container {
+
+	img {
+		display: block;
+		margin-bottom: var(--spacer-xl);
+	}
+
+	.overlay-text {
+		padding: var(--spacer-xl);
+		position: absolute;
+	}
 }
