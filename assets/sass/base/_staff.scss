@@ -9,6 +9,7 @@
 	// grid-template-columns: repeat(5, 1fr);
 	grid-gap: 2rem;
 	display: grid;
+	grid-template-columns: 1fr;
 
 	@include bp(xs) {
 		grid-template-columns: repeat(2, 1fr);
