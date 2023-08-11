@@ -6,17 +6,18 @@
 			$festival = get_scheduled_events('future', ['festival']);
 			if ($festival) :
 			?>
-				<div class="upcoming-festival">
-					<h2 class="mb-5">Upcoming Festival Events</h2>
-					<?php
+			<div class="upcoming-festival">
+				<h2 class="mb-5">Upcoming Festival Events</h2>
+				<?php
+					$parentPost = $post;
 					foreach ($festival as $post) : setup_postdata($post);
-						get_template_part('template-parts/content', get_post_type());
+						get_template_part('template-parts/content', get_post_type(), array('parent' => $parentPost));
 						wp_reset_postdata();
 					endforeach;
 					?>
-				</div>
+			</div>
 			<?php else : ?>
-				<h2>Looks like there are no Festival events coming up. </h2>
+			<h2>Looks like there are no Festival events coming up. </h2>
 			<?php endif; ?>
 		</div>
 	</div>

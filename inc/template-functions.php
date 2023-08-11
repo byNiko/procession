@@ -268,15 +268,17 @@ function procession_get_event_location($post) {
 
 	return $html;
 }
-function procession_the_event_header($post) {
-	echo procession_get_event_header($post);
+function procession_the_event_header($post, $withLink = false) {
+	echo procession_get_event_header($post, $withLink);
 }
 function procession_get_event_header($post, $withLink = false) {
 	$title_class = "class='entry-title event--title'";
 	$link = '<a class="event--title-link" href="' . get_the_permalink($post) . '">' . get_the_title($post) . '</a>';
 	$nolink = get_the_title();
-	$title = '';
-	$title = (is_single()) ? '<h1 ' . $title_class . '>' . $nolink  . '</h1>' : '<h2 ' . $title_class . '>' . $link . '</h2>';
+	$title = '<h1 ' . $title_class . '>' . $nolink  . '</h1>';
+	if ($withLink || !is_single()) {
+		$title =  '<h2 ' . $title_class . '>' .  $link   . '</h2>';
+	}
 
 	$html = '<div class="event--tags">' .
 		procession_get_event_tags($post) .

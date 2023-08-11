@@ -36,7 +36,7 @@ $endDayTimestamp = get_field('end_date_time');
 		</div>
 		<div class="column ">
 			<header class="entry-header event--header">
-				<?php procession_the_event_header($post); ?>
+				<?php procession_the_event_header($post, isset($args['parent'])); ?>
 			</header><!-- .entry-header -->
 			<?php //procession_post_thumbnail(); 
 			?>

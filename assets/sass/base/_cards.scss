@@ -34,9 +34,6 @@
 }
 
 .card {
-	&:hover * {
-		color: var(--color-accent);
-	}
 
 	&.column {
 		margin-top: var(--spacer-lg);
