@@ -6,6 +6,11 @@
  * @package procession
  */
 
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/event-schema.php';
+
 /** add Image Sizes */
 add_image_size('narrow', 1300, 520, array('center', 'center'));
 // add_image_size('box-500', 500, 500, array('center', 'center'));
