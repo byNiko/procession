@@ -9,8 +9,9 @@ if ($futureEvents) : ?>
 			<div class="column">
 				<h2>Upcoming Events</h2>
 			</div>
-			<div class="d-none column column-20 absolute-top-right text-right">
-				<a class="font-xs lh-default d-inline-block td-u" href="/events">View All Events</a>
+			<div class="column column-20 absolute-top-right text-right">
+				<a class="font-xs lh-default d-inline-block td-u"
+				   href="<?php echo get_permalink(get_page_by_path('Schedule')); ?>">View All Events</a>
 			</div>
 		</div>
 
