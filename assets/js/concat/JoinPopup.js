@@ -1,4 +1,5 @@
 ( () => {
+	return;
 	// mark this in sessionStorage
 	document.addEventListener( 'click', handleClick );
 	document.addEventListener( 'keydown', handleKeydown );
